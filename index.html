@@ -3,21 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Mark Vetere - Technical Program Management candidate pursuing opportunities in aerospace, robotics, drones, and AI."
-  />
-  <title>Mark Vetere | Technical Program Management</title>
+  <meta name="description" content="Mark Vetere resume page." />
+  <title>Mark Vetere | Resume</title>
   <style>
     :root {
-      --panel: rgba(10, 19, 33, 0.82);
-      --panel-strong: rgba(13, 24, 40, 0.95);
-      --line: rgba(154, 188, 224, 0.2);
       --text: #ebf2fb;
-      --muted: #9cb3cb;
+      --muted: #b7c8da;
       --accent: #6bd3ff;
       --accent-strong: #2f8cff;
-      --success: #8ef0c3;
+      --line: rgba(154, 188, 224, 0.2);
+      --panel: rgba(10, 19, 33, 0.84);
       --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
     }
 
@@ -25,176 +20,50 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
       font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: var(--text);
-      line-height: 1.6;
       background:
         radial-gradient(circle at top left, rgba(47, 140, 255, 0.28), transparent 34%),
         radial-gradient(circle at top right, rgba(107, 211, 255, 0.18), transparent 28%),
         linear-gradient(160deg, #06101b 0%, #0d1728 48%, #121e31 100%);
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-      background-size: 36px 36px;
-      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent 85%);
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .page {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 32px 0 64px;
-    }
-
-    .shell {
-      position: relative;
-      overflow: hidden;
+    .card {
+      width: min(680px, 100%);
+      padding: 40px 32px;
       border: 1px solid var(--line);
       border-radius: 28px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 12%), var(--panel);
+      background: var(--panel);
       box-shadow: var(--shadow);
+      text-align: center;
       backdrop-filter: blur(14px);
     }
 
-    .shell::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: radial-gradient(circle at top center, rgba(107, 211, 255, 0.12), transparent 30%);
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      padding: 28px;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 32px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .brand::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      box-shadow: 0 0 18px rgba(107, 211, 255, 0.75);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.4fr 0.95fr;
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .hero-card,
-    .panel {
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 28px;
-      background: var(--panel-strong);
-    }
-
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      border: 1px solid rgba(142, 240, 195, 0.25);
-      border-radius: 999px;
-      color: var(--success);
-      background: rgba(142, 240, 195, 0.08);
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-
-    .status::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: currentColor;
-      box-shadow: 0 0 14px rgba(142, 240, 195, 0.75);
-    }
-
-    h1,
-    h2,
-    p {
-      margin-top: 0;
-    }
-
     h1 {
-      margin: 18px 0 18px;
-      max-width: 11ch;
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      line-height: 0.98;
+      margin: 0 0 12px;
+      font-size: clamp(2.6rem, 8vw, 4.5rem);
+      line-height: 1;
       letter-spacing: -0.04em;
     }
 
-    .lead {
-      max-width: 58ch;
-      margin-bottom: 24px;
+    p {
+      margin: 0 0 28px;
       color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 22px 0 26px;
-      padding: 0;
-      list-style: none;
-    }
-
-    .tags li {
-      padding: 9px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.03);
-      color: #d6e6f7;
-      font-size: 0.94rem;
+      font-size: 1.02rem;
     }
 
     .actions {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: center;
       gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
     }
 
     .button {
@@ -209,7 +78,8 @@
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
-    .button:hover {
+    .button:hover,
+    .linkedin:hover {
       transform: translateY(-1px);
     }
 
@@ -224,79 +94,19 @@
       color: var(--text);
     }
 
-    .hero-side {
-      display: grid;
-      gap: 18px;
-    }
-
-    .eyebrow {
-      margin-bottom: 10px;
+    .linkedin {
       color: var(--accent);
-      font-size: 0.88rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
     }
 
-    .stat-value {
-      margin: 0 0 6px;
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    .stat-text,
-    .panel p {
-      color: var(--muted);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .panel h2 {
-      margin-bottom: 10px;
-      font-size: 1.08rem;
-      letter-spacing: -0.02em;
-    }
-
-    .footer {
-      margin-top: 24px;
-      padding: 0 4px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 900px) {
-      .hero,
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        max-width: none;
-      }
+    .linkedin:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 640px) {
-      .page {
-        width: min(100% - 18px, 1120px);
-        padding: 12px 0 28px;
-      }
-
-      .content,
-      .hero-card,
-      .panel {
-        padding: 20px;
-      }
-
-      .topbar {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 22px;
+      .card {
+        padding: 32px 20px;
       }
 
       .actions {
@@ -310,87 +120,16 @@
   </style>
 </head>
 <body>
-  <main class="page">
-    <section class="shell">
-      <div class="content">
-        <header class="topbar">
-          <div class="brand">Mark Vetere</div>
-          <div>Technical Program Management Candidate</div>
-        </header>
-
-        <section class="hero">
-          <div class="hero-card">
-            <div class="status">Open to conversations at job fairs and hiring events</div>
-            <h1>Building programs that move complex technology forward.</h1>
-            <p class="lead">
-              I am pursuing technical program management opportunities where execution, cross-functional
-              coordination, and technical curiosity matter, especially in aerospace, robotics, drones,
-              and AI-driven products.
-            </p>
-
-            <ul class="tags">
-              <li>Technical Program Management</li>
-              <li>Aerospace</li>
-              <li>Robotics</li>
-              <li>Drones</li>
-              <li>Artificial Intelligence</li>
-            </ul>
-
-            <div class="actions">
-              <a class="button primary" href="./resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
-              <a class="button secondary" href="./resume.pdf" download>Download PDF</a>
-            </div>
-          </div>
-
-          <div class="hero-side">
-            <aside class="panel">
-              <div class="eyebrow">Career Focus</div>
-              <p class="stat-value">TPM for high-stakes systems</p>
-              <p class="stat-text">
-                Interested in programs that connect engineering, product, operations, and delivery in
-                environments where precision, speed, and accountability all matter.
-              </p>
-            </aside>
-
-            <aside class="panel">
-              <div class="eyebrow">At a Glance</div>
-              <p>
-                This page is a quick introduction for recruiters and hiring teams. My full experience,
-                education, and project history are available in the linked resume.
-              </p>
-            </aside>
-          </div>
-        </section>
-
-        <section class="grid" aria-label="Professional summary">
-          <article class="panel">
-            <h2>What I Bring</h2>
-            <p>
-              A program mindset centered on planning, communication, risk management, and keeping teams
-              aligned when technical work crosses multiple disciplines.
-            </p>
-          </article>
-
-          <article class="panel">
-            <h2>Where I Want To Contribute</h2>
-            <p>
-              Mission-driven teams building physical systems, intelligent platforms, and operationally
-              demanding products that require disciplined execution.
-            </p>
-          </article>
-
-          <article class="panel">
-            <h2>What To Do Next</h2>
-            <p>
-              Use the resume link above for the full overview, and feel free to reach out if there is a
-              technical program, operations, or delivery role that fits this direction.
-            </p>
-          </article>
-        </section>
-
-        <p class="footer">Hosted on GitHub Pages for quick sharing during recruiting conversations.</p>
-      </div>
-    </section>
+  <main class="card">
+    <h1>Mark Vetere</h1>
+    <p>Technical Program Management candidate</p>
+    <div class="actions">
+      <a class="button primary" href="./resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+      <a class="button secondary" href="./resume.pdf" download>Download Resume</a>
+    </div>
+    <a class="linkedin" href="https://www.linkedin.com/in/mark-vetere" target="_blank" rel="noopener noreferrer">
+      linkedin.com/in/mark-vetere
+    </a>
   </main>
 </body>
 </html>
